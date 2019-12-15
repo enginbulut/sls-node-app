@@ -20,7 +20,7 @@ export class NotesApiService {
     let args = {
       service: "execute-api",
       region: "us-east-1",
-      hotsname: host.hostname,
+      hostname: host.hostname,
       path: path,
       method: method,
       body: body,
@@ -41,7 +41,7 @@ export class NotesApiService {
         let savedCreds = JSON.parse(savedCredsJson);
         let creds = {
           accessKeyId: savedCreds.Credentials.AccessKeyId,
-          secretAccessKey: savedCreds.Credentials.SecretAccessKey,
+          secretAccessKey: savedCreds.Credentials.SecretKey,
           sessionToken: savedCreds.Credentials.SessionToken
         };
 
